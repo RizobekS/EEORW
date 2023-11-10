@@ -1,0 +1,134 @@
+{% extends 'components/base.html' %}
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block title %}{% trans "PIU Staff"%}{% endblock title %}
+
+{% block content %}
+<div class="row-fluid mb-5">
+    <div class="bg-image"
+         style="background-image: url({% static 'eeorw_app/bg-img/banner_vector.webp' %});
+                height: 500px; top: 1;">
+
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <p class="text-white mb-0 h1" data-aos="fade-up">{% translate 'PIU Staff' %}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<section class="mt-5 mb-5">
+    <div class="container">
+        <div class="section-heading text-center">
+            <h4>{% trans 'Project Implementation Unit Staff'%}</h4>
+            <div class="line"></div>
+        </div>
+        <div class="row mt-3">
+            {% for staff_member in staff_piu %}
+            <div class="col-12 col-sm-6 col-md-4 mb-5">
+                <div class="card text-center" data-aos="flip-up">
+                    <div class="bg-image hover-overlay rounded-9" data-mdb-ripple-color="light">
+                        <img src="{{ staff_member.image.url }}" alt="JPIU Staff Image" class="img-fluid"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            {% if LANGUAGE_CODE == 'en' %}
+                                {{ staff_member.name_en }}
+                                {% elif LANGUAGE_CODE == 'ru' %}
+                                {{ staff_member.name_ru }}
+                                {% else %}
+                                {{ staff_member.name }}
+                                {% endif %}
+                        </h5>
+                        <p class="card-text">
+                            {% if LANGUAGE_CODE == 'en' %}
+                                {{ staff_member.title_en }}
+                                {% elif LANGUAGE_CODE == 'ru' %}
+                                {{ staff_member.title_ru }}
+                                {% elif LANGUAGE_CODE == 'uz' %}
+                                {{ staff_member.title_uz }}
+                                {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% if staff_jizzakh %}
+        <div class="section-heading text-center">
+            <h4>{% trans 'Jizzakh interregional Project Implementation Unit office'%}</h4>
+            <div class="line"></div>
+        </div>
+        <div class="row mt-30">
+            {% for staff_member in staff_jizzakh %}
+            <div class="col-12 col-sm-6 col-md-4 mb-5">
+                <div class="card text-center" data-aos="flip-up">
+                    <div class="bg-image hover-overlay rounded-9" data-mdb-ripple-color="light">
+                        <img src="{{ staff_member.image.url }}" alt="JPIU Staff Image" class="img-fluid"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            {% if LANGUAGE_CODE == 'en' %}
+                                {{ staff_member.name_en }}
+                                {% elif LANGUAGE_CODE == 'ru' %}
+                                {{ staff_member.name_ru }}
+                                {% else %}
+                                {{ staff_member.name }}
+                                {% endif %}
+                        </h5>
+                        <p class="card-text">
+                            {% if LANGUAGE_CODE == 'en' %}
+                                {{ staff_member.title_en }}
+                                {% elif LANGUAGE_CODE == 'ru' %}
+                                {{ staff_member.title_ru }}
+                                {% elif LANGUAGE_CODE == 'uz' %}
+                                {{ staff_member.title_uz }}
+                                {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% if staff_fergana %}
+        <div class="section-heading text-center">
+            <h4>{% trans 'Fergana interregional Project Implementation Unit office'%}</h4>
+            <div class="line"></div>
+        </div>
+        <div class="row mt-30">
+            {% for staff_member in staff_fergana %}
+            <div class="col-12 col-sm-6 col-md-4 mb-5">
+                <div class="card text-center" data-aos="flip-up">
+                    <div class="bg-image hover-overlay rounded-9" data-mdb-ripple-color="light">
+                        <img src="{{ staff_member.image.url }}" alt="JPIU Staff Image" class="img-fluid"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            {% if LANGUAGE_CODE == 'en' %}
+                                {{ staff_member.name_en }}
+                                {% elif LANGUAGE_CODE == 'ru' %}
+                                {{ staff_member.name_ru }}
+                                {% else %}
+                                {{ staff_member.name }}
+                                {% endif %}
+                        </h5>
+                        <p class="card-text">
+                            {% if LANGUAGE_CODE == 'en' %}
+                                {{ staff_member.title_en }}
+                                {% elif LANGUAGE_CODE == 'ru' %}
+                                {{ staff_member.title_ru }}
+                                {% elif LANGUAGE_CODE == 'uz' %}
+                                {{ staff_member.title_uz }}
+                                {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock content %}

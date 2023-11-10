@@ -1,0 +1,189 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-09 16:18+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: .\eeorw_app\templates\about_us.html:5
+#: .\eeorw_app\templates\components\_footer.html:49
+#: .\eeorw_app\templates\components\base.html:12
+#: .\eeorw_app\templates\components\base.html:14
+#: .\eeorw_app\templates\components\base.html:16
+#: .\eeorw_app\templates\components\base.html:53
+msgid "Economic empowerment of rural women in Uzbekistan"
+msgstr "O'zbekistonda qishloq ayollarining iqtisodiy imkoniyatlarini kengaytirish loyihasi"
+
+#: .\eeorw_app\templates\about_us.html:16 .\eeorw_app\templates\home.html:81
+msgid "About Us"
+msgstr "Biz haqimizda"
+
+#: .\eeorw_app\templates\about_us.html:29
+msgid ""
+"Project \"Economic Empowerment of Rural Women\" with the participation of "
+"grants from the World Bank and the Japan Social Development Fund"
+msgstr ""
+"Jahon banki va Yaponiya ijtimoiy rivojlanish jamg'armasining grant "
+"mablag'lari ishtirokidagi “Qishloq ayollari iqtisodiy imkoniyatlarini kengaytirish” loyihasi to'g'risida"
+
+#: .\eeorw_app\templates\components\_footer.html:12
+msgid "Join us in social networks:"
+msgstr "Ijtimoiy tarmoqlarda bizga qo'shiling:"
+
+#: .\eeorw_app\templates\components\_footer.html:58
+msgid "Links"
+msgstr "Havolalar"
+
+#: .\eeorw_app\templates\components\_footer.html:63
+#: .\eeorw_app\templates\components\base.html:96
+#: .\eeorw_app\templates\home.html:13 .\eeorw_app\templates\news.html:5
+#: .\eeorw_app\templates\news.html:16
+msgid "News"
+msgstr "Yangiliklar"
+
+#: .\eeorw_app\templates\components\_footer.html:66
+#: .\eeorw_app\templates\components\base.html:108
+#: .\eeorw_app\templates\components\base.html:113
+msgid "About us"
+msgstr "Biz haqimizda"
+
+#: .\eeorw_app\templates\components\_footer.html:69
+#: .\eeorw_app\templates\components\base.html:116
+#: .\eeorw_app\templates\piu_staff.html:5
+#: .\eeorw_app\templates\piu_staff.html:15
+msgid "PIU Staff"
+msgstr "LAOG xodimlari"
+
+#: .\eeorw_app\templates\components\_footer.html:74
+msgid "Vacancy"
+msgstr "Vakansiyalar"
+
+#: .\eeorw_app\templates\components\_footer.html:77 .\eeorw_app\templates\components\_footer.html:112
+#: .\eeorw_app\templates\components\base.html:121
+#: .\eeorw_app\templates\contact.html:4 .\eeorw_app\templates\contact.html:25
+msgid "Contacts"
+msgstr "Aloqalar"
+
+#: .\eeorw_app\templates\components\_footer.html:90
+msgid "Opening hours"
+msgstr "Ish Vaqtlari"
+
+#: .\eeorw_app\templates\components\_footer.html:95
+msgid "Mon-Fri"
+msgstr "Dush-Juma"
+
+#: .\eeorw_app\templates\components\_footer.html:99
+msgid "Saturday"
+msgstr "Shanba"
+
+#: .\eeorw_app\templates\components\_footer.html:100
+#: .\eeorw_app\templates\components\_footer.html:104
+msgid "Closed"
+msgstr "Yopiq"
+
+#: .\eeorw_app\templates\components\_footer.html:103
+msgid "Sunday"
+msgstr "Yakshanba"
+
+#: .\eeorw_app\templates\components\_footer.html:116
+#: .\eeorw_app\templates\contact.html:71
+msgid "8893+WVM, Тоshkent, Uzbekistan"
+msgstr "8893+WVM, Тоshkent, Uzbekiston"
+
+#: .\eeorw_app\templates\components\_footer.html:124
+msgid "While using the site information, a link to the source is required"
+msgstr "Saytdagi ma'lumotlardan foydalanilganda manba ko`rsatilishi shart"
+
+#: .\eeorw_app\templates\components\base.html:58
+msgid "E-mail"
+msgstr ""
+
+#: .\eeorw_app\templates\components\base.html:124
+#: .\eeorw_app\templates\faq.html:5
+msgid "FAQ"
+msgstr ""
+
+#: .\eeorw_app\templates\contact.html:45
+msgid "Ooops, something went wrong!"
+msgstr "Xatolik"
+
+#: .\eeorw_app\templates\contact.html:70
+msgid "Address"
+msgstr "Manzil"
+
+#: .\eeorw_app\templates\contact.html:73
+msgid "Phone"
+msgstr "Telefon"
+
+#: .\eeorw_app\templates\contact.html:77
+msgid "Email"
+msgstr "Elektron manzil"
+
+#: .\eeorw_app\templates\contact.html:87
+msgid "Get In Touch"
+msgstr "Biz bilan bog‘lanish"
+
+#: .\eeorw_app\templates\contact.html:96
+msgid "Your Name"
+msgstr "Ismingiz"
+
+#: .\eeorw_app\templates\contact.html:102
+msgid "Your Email"
+msgstr "Elektron manzilingiz"
+
+#: .\eeorw_app\templates\contact.html:109
+msgid "Your Message"
+msgstr "Xabar"
+
+#: .\eeorw_app\templates\contact.html:114
+msgid "Send Message"
+msgstr "Yuborish"
+
+#: .\eeorw_app\templates\faq.html:31
+msgid "Frequently asked questions"
+msgstr "Savol-Javob"
+
+#: .\eeorw_app\templates\faq.html:32
+msgid "Didn't find your answer in the FAQ?"
+msgstr "O'zingizga kerakli javobni topmadingizmi?"
+
+#: .\eeorw_app\templates\faq.html:34
+msgid "Contact our support team"
+msgstr "Biz bilan bog'laning"
+
+#: .\eeorw_app\templates\home.html:73
+msgid "All news"
+msgstr "Barcha yangiliklar"
+
+#: .\eeorw_app\templates\news-details.html:304
+#: .\eeorw_app\templates\news-details.html:308
+msgid "Share"
+msgstr "Ulashish"
+
+#: .\eeorw_app\templates\news-details.html:306
+msgid "Send"
+msgstr "Yuborish"
+
+#: .\eeorw_app\templates\piu_staff.html:24
+msgid "Project Implementation Unit Staff"
+msgstr "Loyiha amalga oshirish guruhining xodimlari"
+
+#: .\eeorw_app\templates\piu_staff.html:60
+msgid "Jizzakh interregional Project Implementation Unit office"
+msgstr "Jizzax Hududlararo Amalga Oshirish Guruhi"
+
+#: .\eeorw_app\templates\piu_staff.html:97
+msgid "Fergana interregional Project Implementation Unit office"
+msgstr "Farg‘ona Hududlararo Amalga Oshirish Guruhi"

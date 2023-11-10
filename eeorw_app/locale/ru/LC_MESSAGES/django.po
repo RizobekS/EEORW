@@ -1,0 +1,192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-09 16:18+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: .\eeorw_app\templates\about_us.html:5
+#: .\eeorw_app\templates\components\_footer.html:49
+#: .\eeorw_app\templates\components\base.html:12
+#: .\eeorw_app\templates\components\base.html:14
+#: .\eeorw_app\templates\components\base.html:16
+#: .\eeorw_app\templates\components\base.html:53
+msgid "Economic empowerment of rural women in Uzbekistan"
+msgstr "Расширение экономических прав и возможностей сельских женщин в Узбекистане"
+
+#: .\eeorw_app\templates\about_us.html:16 .\eeorw_app\templates\home.html:81
+msgid "About Us"
+msgstr "О нас"
+
+#: .\eeorw_app\templates\about_us.html:29
+msgid ""
+"Project \"Economic Empowerment of Rural Women\" with the participation of "
+"grants from the World Bank and the Japan Social Development Fund"
+msgstr ""
+"Проект «Расширение экономических возможностей сельских женщин» с "
+"участием грантов Всемирного банка и Японского фонда социального развития"
+
+#: .\eeorw_app\templates\components\_footer.html:12
+msgid "Join us in social networks:"
+msgstr "Присоединяйтесь к нам в социальных сетях:"
+
+#: .\eeorw_app\templates\components\_footer.html:58
+msgid "Links"
+msgstr "Ссылки"
+
+#: .\eeorw_app\templates\components\_footer.html:63
+#: .\eeorw_app\templates\components\base.html:96
+#: .\eeorw_app\templates\home.html:13 .\eeorw_app\templates\news.html:5
+#: .\eeorw_app\templates\news.html:16
+msgid "News"
+msgstr "Новости"
+
+#: .\eeorw_app\templates\components\_footer.html:66
+#: .\eeorw_app\templates\components\base.html:108
+#: .\eeorw_app\templates\components\base.html:113
+msgid "About us"
+msgstr "О нас"
+
+#: .\eeorw_app\templates\components\_footer.html:69
+#: .\eeorw_app\templates\components\base.html:116
+#: .\eeorw_app\templates\piu_staff.html:5
+#: .\eeorw_app\templates\piu_staff.html:15
+msgid "PIU Staff"
+msgstr "Сотрудники ГРП"
+
+#: .\eeorw_app\templates\components\_footer.html:74
+msgid "Vacancy"
+msgstr "Вакансии"
+
+#: .\eeorw_app\templates\components\_footer.html:77 .\eeorw_app\templates\components\_footer.html:112
+#: .\eeorw_app\templates\components\base.html:121
+#: .\eeorw_app\templates\contact.html:4 .\eeorw_app\templates\contact.html:25
+msgid "Contacts"
+msgstr "Контакты"
+
+#: .\eeorw_app\templates\components\_footer.html:90
+msgid "Opening hours"
+msgstr "Часы работы"
+
+#: .\eeorw_app\templates\components\_footer.html:95
+msgid "Mon-Fri"
+msgstr "Пн-Пт"
+
+#: .\eeorw_app\templates\components\_footer.html:99
+msgid "Saturday"
+msgstr "Суббота"
+
+#: .\eeorw_app\templates\components\_footer.html:100
+#: .\eeorw_app\templates\components\_footer.html:104
+msgid "Closed"
+msgstr "Закрыто"
+
+#: .\eeorw_app\templates\components\_footer.html:103
+msgid "Sunday"
+msgstr "Воскресенье"
+
+
+#: .\eeorw_app\templates\components\_footer.html:116
+#: .\eeorw_app\templates\contact.html:71
+msgid "8893+WVM, Тashkent, Uzbekistan"
+msgstr "8893+WVM, Ташкент, Узбекистан"
+
+#: .\eeorw_app\templates\components\_footer.html:124
+msgid "While using the site information, a link to the source is required"
+msgstr "При использовании информации сайта ссылка на источник обязательна"
+
+#: .\eeorw_app\templates\components\base.html:58
+msgid "E-mail"
+msgstr ""
+
+#: .\eeorw_app\templates\components\base.html:124
+#: .\eeorw_app\templates\faq.html:5
+msgid "FAQ"
+msgstr ""
+
+#: .\eeorw_app\templates\contact.html:45
+msgid "Ooops, something went wrong!"
+msgstr "Уупс, что-то пошло не так"
+
+#: .\eeorw_app\templates\contact.html:70
+msgid "Address"
+msgstr "Адрес"
+
+#: .\eeorw_app\templates\contact.html:73
+msgid "Phone"
+msgstr "Телефон"
+
+#: .\eeorw_app\templates\contact.html:77
+msgid "Email"
+msgstr "Электронная почта"
+
+#: .\eeorw_app\templates\contact.html:87
+msgid "Get In Touch"
+msgstr "Связаться с нами"
+
+#: .\eeorw_app\templates\contact.html:96
+msgid "Your Name"
+msgstr "Имя"
+
+#: .\eeorw_app\templates\contact.html:102
+msgid "Your Email"
+msgstr "Электронная почта"
+
+#: .\eeorw_app\templates\contact.html:109
+msgid "Your Message"
+msgstr "Сообщение"
+
+#: .\eeorw_app\templates\contact.html:114
+msgid "Send Message"
+msgstr "Отправить"
+
+#: .\eeorw_app\templates\faq.html:31
+msgid "Frequently asked questions"
+msgstr "Часто задаваемые вопросы"
+
+#: .\eeorw_app\templates\faq.html:32
+msgid "Didn't find your answer in the FAQ?"
+msgstr "Не нашли ответ здесь?"
+
+#: .\eeorw_app\templates\faq.html:34
+msgid "Contact our support team"
+msgstr "Свяжитесь с нашей службой поддержки"
+
+#: .\eeorw_app\templates\home.html:73
+msgid "All news"
+msgstr "Все новости"
+
+#: .\eeorw_app\templates\news-details.html:304
+#: .\eeorw_app\templates\news-details.html:308
+msgid "Share"
+msgstr "Поделиться"
+
+#: .\eeorw_app\templates\news-details.html:306
+msgid "Send"
+msgstr "Отправить"
+
+#: .\eeorw_app\templates\piu_staff.html:24
+msgid "Project Implementation Unit Staff"
+msgstr "Персонал группы реализации проекта"
+
+#: .\eeorw_app\templates\piu_staff.html:60
+msgid "Jizzakh interregional Project Implementation Unit office"
+msgstr "Джизакский межрегиональный офис Группы Реализации Проекта"
+
+#: .\eeorw_app\templates\piu_staff.html:97
+msgid "Fergana interregional Project Implementation Unit office"
+msgstr "Ферганский межрегиональный офис Группы Реализации Проекта"

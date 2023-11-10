@@ -1,0 +1,141 @@
+{% load static %}
+{% load i18n %}
+
+<!-- Footer -->
+<footer class="text-center text-lg-start text-white" style="background-color: #006262;">
+    <!-- Section: Social media -->
+    <section
+            class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+    >
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+            <span>{% translate "Join us in social networks:" %}</span>
+        </div>
+        <div>
+<!--            <a href="https://www.linkedin.com/company/joint-projects-implementation-unit/" target="_blank"-->
+<!--               class="me-4 text-reset">-->
+<!--                <i class="fab fa-linkedin"></i>-->
+<!--            </a>-->
+<!--            <a href="https://www.facebook.com/BLAOG2022/" target="_blank" class="me-4 text-reset">-->
+<!--                <i class="fab fa-facebook-f"></i>-->
+<!--            </a>-->
+<!--            <a href="https://www.youtube.com/channel/UCYib8rCrsF7z2MmTPbnwjgg" target="_blank" class="me-4 text-reset">-->
+<!--                <i class="fab fa-youtube"></i>-->
+<!--            </a>-->
+<!--            <a href="https://www.instagram.com/uzrd_uz/" target="_blank" class="me-4 text-reset">-->
+<!--                <i class="fab fa-instagram"></i>-->
+<!--            </a>-->
+            <a href="https://t.me/eeorw" target="_blank" class="me-4 text-reset">
+                <i class="fab fa-telegram"></i> Telegram
+            </a>
+        </div>
+        <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+        <div class="container-fluid text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-sm-3 col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4 text-center">
+                        <a href="{% url 'home' %}"><img src="{% static '/eeorw_app/img-core/gerb.png' %}" alt="EEORW" width="120px"></a>
+                    </h6>
+                    <p class="text-center text-uppercase">
+                        <a href="{% url 'home' %}" class="text-white">
+                            {% translate "Economic empowerment of rural women in Uzbekistan" %}</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-sm-1 col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        {% translate "Links" %}
+                    </h6>
+                    <div class="row-fluid col-12 opening-hours__child">
+                        <div class="me-5">
+                            <p>
+                                <a href="{% url 'news' %}" class="quick-link">{% translate "News" %}</a>
+                            </p>
+                            <p>
+                                <a href="{% url 'about' %}" class="quick-link">{% translate "About us" %}</a>
+                            </p>
+                            <p>
+                                <a href="{% url 'piu' %}" class="quick-link">{% translate "PIU Staff" %}</a>
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                                <a href="{% url 'home' %}" class="quick-link">{% translate "Vacancy" %}</a>
+                            </p>
+                            <p>
+                                <a href="{% url 'home' %}" class="quick-link">{% translate "Contacts" %}</a>
+                            </p>
+                            <p>
+                                <a href="{% url 'home' %}" class="quick-link">F.A.Q</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Opening Hours -->
+                <div class="col-sm-3 col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase text-center"><i class="fas fa-business-time fa-sm"></i>{% translate "Opening hours"%}</h6>
+
+
+                    <div class="col-12">
+                        <div class="opening-hours__child mt-4">
+                            <span>{% translate "Mon-Fri"%}</span>
+                            <span>9.00-18.00</span>
+                        </div>
+                        <div class="opening-hours__child mt-3">
+                            <span>{% translate "Saturday" %}</span>
+                            <span>{% translate "Closed"%}</span>
+                        </div>
+                        <div class="opening-hours__child mt-3">
+                            <span>{% translate "Sunday" %}</span>
+                            <span>{% translate "Closed"%}</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grid column -->
+                <div class="col-sm-3 col-md-3 col-lg-2 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        {% translate "Contacts" %}
+                    </h6>
+                    <p>
+                        <a href="https://maps.app.goo.gl/HRKrwvJPqyeTM3rt6" target="_blank" class="quick-link"><i
+                                class="fas fa-map-marker-alt me-3"></i> <span>{% trans "8893+WVM, Тashkent, Uzbekistan" %}</span></a>
+                    </p>
+                    <p>
+                        <a href="mailto:laog@wcu.uz" class="quick-link"><i class="fas fa-envelope me-3"></i>
+                            <span>laog@wcu.uz</span></a>
+                    </p>
+<!--                    <p style="color: white;"><a href="tel:+998712078407" class="quick-link"><i-->
+<!--                            class="fas fa-phone me-3"></i>+99871 207-84-07</a></p>-->
+                    <p style="color: white;">{% trans 'While using the site information, a link to the source is required' %}</p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center text-muted p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        Powered by <a href="https://t.me/WEBadiko" target="_blank" class="quick-link me-0">WEBadiko</a><br>
+        <script>document.write(new Date().getFullYear());</script>
+
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->

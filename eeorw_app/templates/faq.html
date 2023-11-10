@@ -1,0 +1,55 @@
+{% extends 'components/base.html' %}
+{% load static i18n%}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block title %}{% trans "FAQ"%}{% endblock title %}
+
+{% block content %}
+<style>p{
+        color: black;
+    }
+
+
+</style>
+
+<div class="row-fluid mb-5">
+    <div class="bg-image"
+         style="background-image: url({% static 'eeorw_app/bg-img/banner_vector.webp' %});
+                height: 500px; top: 1;">
+
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+            <div class="d-flex justify-content-center align-items-center h-100" data-aos="fade-up">
+                <p class="text-white mb-0 h1">F.A.Q</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container">
+    <div class="row d-flex justify-content-between mt-2 mb-5 ">
+            <div class="col-sm-12 col-md-6 align-self-center" data-aos="fade-up">
+            <h1>{% translate 'Frequently asked questions' %}</h1>
+            <p>{% translate "Didn't find your answer in the FAQ?" %}<a href="{% url 'contact' %}"
+                                                                       style="color: #3F8FFF;">
+                {% translate 'Contact our support team' %}</a>.</p>
+        </div>
+        <div class="col-sm-12 col-md-6" data-aos="flip-up">
+            {% for q_and_a in questions_and_answers %}
+            {% if LANGUAGE_CODE == 'en' %}
+            <h5>{{ q_and_a.question_en }}</h5>
+            <p>{{ q_and_a.answer_en }}</p>
+            <p>&nbsp;</p>
+            {% elif LANGUAGE_CODE == 'uz' %}
+            <h5>{{ q_and_a.question_uz }}</h5>
+            <p>{{ q_and_a.answer_uz }}</p>
+            <p>&nbsp;</p>
+            {% elif LANGUAGE_CODE == 'ru' %}
+            <h5>{{ q_and_a.question_ru }}</h5>
+            <p>{{ q_and_a.answer_ru }}</p>
+            <p>&nbsp;</p>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

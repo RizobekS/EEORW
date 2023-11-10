@@ -1,0 +1,57 @@
+{% extends 'components/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Economic empowerment of rural women in Uzbekistan"%}{% endblock title %}
+
+{% block content %}
+
+<div class="row-fluid mb-5">
+    <div class="bg-image"
+         style="background-image: url({% static 'eeorw_app/bg-img/banner_vector.webp' %});
+                height: 500px;">
+
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <p class="text-white mb-0 h1" data-aos="fade-up">{% translate 'About Us' %}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% block detail %}
+<div class="container">
+    <div class="row-fluid mt-5 mb-5">
+        <h3 class="text-center"
+            data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="500">{% trans 'Project "Economic Empowerment of Rural Women" with the participation of grants from the World Bank and the Japan Social Development Fund' %}</h3>
+        <div class="line"></div>
+        <div class="d-flex justify-content-between row">
+            <div class="col-sm-12 col-md-6">
+                {% if LANGUAGE_CODE == 'en' %}
+                {{ info_about.about_en|safe|linebreaksbr }}
+                    {% elif LANGUAGE_CODE == 'uz' %}
+                    {{ info_about.about_uz|safe|linebreaksbr }}
+                    {% elif LANGUAGE_CODE == 'ru' %}
+                    {{ info_about.about_ru|safe|linebreaksbr }}
+                {% endif %}
+            </div>
+            <div class="col-sm-12 col-md-6" data-aos="zoom-out">
+                {% if info_about.image_en %}
+                {% if LANGUAGE_CODE == 'en' and info_about.image_en %}
+                <img src="{{ info_about.image_en.url }}" class="lazy img-fluid rounded hover-shadow" alt="uzrd About us">
+                {% elif LANGUAGE_CODE == 'ru' and info_about.image_ru %}
+                <img src="{{ info_about.image_ru.url }}" class="lazy img-fluid rounded hover-shadow" alt="uzrd About us">
+                {% else %}
+                <img src="{{ info_about.image_uz.url }}" class="lazy img-fluid rounded hover-shadow" alt="uzrd About us">
+                {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock detail %}
+{% endblock content %}
