@@ -23,7 +23,7 @@ msgstr ""
 #: .\eeorw_app\templates\components\base.html:14
 #: .\eeorw_app\templates\components\base.html:16
 #: .\eeorw_app\templates\components\base.html:53
-msgid "Economic empowerment of rural women in Uzbekistan"
+msgid "Enhancing economic opportunities for rural women"
 msgstr "O'zbekistonda qishloq ayollarining iqtisodiy imkoniyatlarini kengaytirish loyihasi"
 
 #: .\eeorw_app\templates\about_us.html:16 .\eeorw_app\templates\home.html:81
@@ -99,8 +99,8 @@ msgstr "Yakshanba"
 
 #: .\eeorw_app\templates\components\_footer.html:116
 #: .\eeorw_app\templates\contact.html:71
-msgid "8893+WVM, Тоshkent, Uzbekistan"
-msgstr "8893+WVM, Тоshkent, Uzbekiston"
+msgid "Tashkent, Mirzo Ulugbek district, M. Ismaili street 1G"
+msgstr "Toshkent shahar, Mirzo Ulug‘bek tumani, M.Ismoiliy 1G ko‘chasi"
 
 #: .\eeorw_app\templates\components\_footer.html:124
 msgid "While using the site information, a link to the source is required"

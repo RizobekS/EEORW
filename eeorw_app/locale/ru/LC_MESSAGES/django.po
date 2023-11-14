@@ -25,7 +25,7 @@ msgstr ""
 #: .\eeorw_app\templates\components\base.html:14
 #: .\eeorw_app\templates\components\base.html:16
 #: .\eeorw_app\templates\components\base.html:53
-msgid "Economic empowerment of rural women in Uzbekistan"
+msgid "Enhancing economic opportunities for rural women"
 msgstr "Расширение экономических прав и возможностей сельских женщин в Узбекистане"
 
 #: .\eeorw_app\templates\about_us.html:16 .\eeorw_app\templates\home.html:81
@@ -102,8 +102,8 @@ msgstr "Воскресенье"
 
 #: .\eeorw_app\templates\components\_footer.html:116
 #: .\eeorw_app\templates\contact.html:71
-msgid "8893+WVM, Тashkent, Uzbekistan"
-msgstr "8893+WVM, Ташкент, Узбекистан"
+msgid "Tashkent, Mirzo Ulugbek district, M. Ismaili street 1G"
+msgstr "г.Ташкент, Мирзо Улугбекский район, улица М.Исмаили 1Г"
 
 #: .\eeorw_app\templates\components\_footer.html:124
 msgid "While using the site information, a link to the source is required"
