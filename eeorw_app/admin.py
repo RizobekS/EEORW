@@ -34,7 +34,7 @@ class FAQAdmin(admin.ModelAdmin):
     search_fields = ['question_en', 'question_uz', 'question_ru']
 
 
-admin.site.site_header = "Economic empowerment of rural women in Uzbekistan"
+admin.site.site_header = "Enhancing economic opportunities for rural women"
 admin.site.register(News, NewsAdmin)
 admin.site.register(AboutPage, AboutPageAdmin)
 admin.site.register(Contact, ContactAdmin)
