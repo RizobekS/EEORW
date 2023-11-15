@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from .forms import ContactForm
-from .models import News, AboutPage, PIUStaff, FAQ
+from .models import News, AboutPage, PIUStaff, FAQ, Document
 
 
 def home(request):
@@ -55,6 +55,22 @@ def news_details(request, pk):
     detail.save()
 
     return render(request, "news-details.html", {'detail': detail})
+
+
+def document(request):
+    documents = Document.objects.order_by('-date').all()
+
+    page = request.GET.get('page', 1)
+    paginator = Paginator(documents, 20)  # number of documents in each page
+
+    try:
+        documents = paginator.page(page)
+    except PageNotAnInteger:
+        documents = paginator.page(1)
+    except EmptyPage:
+        documents = paginator.page(paginator.num_pages)
+
+    return render(request, 'document.html', {'documents': documents})
 
 
 def contact(request):

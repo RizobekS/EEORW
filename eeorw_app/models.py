@@ -135,6 +135,28 @@ class News(models.Model):
         return reverse('news_details', args=[str(self.pk)])
 
 
+class Document(models.Model):
+    class Meta:
+        verbose_name = 'Document'
+        verbose_name_plural = 'Documents'
+
+    title_en = models.CharField(max_length=255, null=True, blank=True)
+    title_uz = models.CharField(max_length=255, null=True, blank=True)
+    title_ru = models.CharField(max_length=255, null=True, blank=True)
+
+    file_en = models.FileField(upload_to='documents/en',
+                               validators=[FileExtensionValidator(allowed_extensions=['pdf'])], null=True, blank=True)
+    file_uz = models.FileField(upload_to='documents/uz',
+                               validators=[FileExtensionValidator(allowed_extensions=['pdf'])], null=True, blank=True)
+    file_ru = models.FileField(upload_to='documents/ru',
+                               validators=[FileExtensionValidator(allowed_extensions=['pdf'])], null=True, blank=True)
+
+    date = models.DateField(null=True)
+
+    def __str__(self):
+        return self.title_en
+
+
 class Contact(models.Model):
     class Meta:
         verbose_name = 'Contact'

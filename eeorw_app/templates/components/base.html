@@ -45,7 +45,7 @@
             <div class="mt-2">
                 <img src="{% static '/eeorw_app/img-core/gerb.png' %}" alt="EEORW" width="80">
             </div>
-            <div class="text-center mt-2 col-md-8 col-lg-7" style="text-transform: uppercase;" data-aos="zoom-in"><h5
+            <div class="text-center mt-2 col-md-8 col-lg-8" style="text-transform: uppercase;" data-aos="zoom-in"><h5
                     class="header-text"><span
                     style="color: #006262;">{% trans 'Enhancing economic opportunities for rural women' %}</span></h5>
 
@@ -91,6 +91,9 @@
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item me-3">
                             <a class="nav-link" aria-current="page" href="{% url 'news' %}">{% translate "News" %}</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="{% url 'document' %}">{% translate "Documents" %}</a>
                         </li>
                         <!-- Navbar dropdown -->
                         <li class="nav-item dropdown me-3">

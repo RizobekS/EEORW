@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import News, Contact, AboutPage, FAQ
+from .models import News, Contact, AboutPage, FAQ, Document
 
 
 class NewsAdmin(admin.ModelAdmin):
@@ -20,6 +20,11 @@ class NewsAdmin(admin.ModelAdmin):
     search_fields = ['title_en', 'title_uz', 'title_ru']
 
 
+class DocumentAdmin(admin.ModelAdmin):
+    list_display = ['title_en', 'title_uz', 'title_ru', 'file_en', 'file_uz', 'file_ru', 'date']
+    search_fields = ['title_en', 'title_uz', 'title_ru']
+
+
 class ContactAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'message', 'received_date', 'replied_date', 'reply_subject', 'reply_message']
     search_fields = ['name', 'email', 'message']
@@ -36,6 +41,7 @@ class FAQAdmin(admin.ModelAdmin):
 
 admin.site.site_header = "Enhancing economic opportunities for rural women"
 admin.site.register(News, NewsAdmin)
+admin.site.register(Document, DocumentAdmin)
 admin.site.register(AboutPage, AboutPageAdmin)
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(FAQ, FAQAdmin)

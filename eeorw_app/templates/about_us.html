@@ -41,11 +41,11 @@
             <div class="col-sm-12 col-md-6" data-aos="zoom-out">
                 {% if info_about.image_en %}
                 {% if LANGUAGE_CODE == 'en' and info_about.image_en %}
-                <img src="{{ info_about.image_en.url }}" class="lazy img-fluid rounded hover-shadow" alt="uzrd About us">
+                <img src="{{ info_about.image_en.url }}" class="lazy img-fluid rounded hover-shadow" alt="info_about.about_en">
                 {% elif LANGUAGE_CODE == 'ru' and info_about.image_ru %}
-                <img src="{{ info_about.image_ru.url }}" class="lazy img-fluid rounded hover-shadow" alt="uzrd About us">
+                <img src="{{ info_about.image_ru.url }}" class="lazy img-fluid rounded hover-shadow" alt="info_about.about_ru">
                 {% else %}
-                <img src="{{ info_about.image_uz.url }}" class="lazy img-fluid rounded hover-shadow" alt="uzrd About us">
+                <img src="{{ info_about.image_uz.url }}" class="lazy img-fluid rounded hover-shadow" alt="info_about.about_uz">
                 {% endif %}
                 {% endif %}
             </div>

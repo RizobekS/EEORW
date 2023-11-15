@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-09 16:18+0500\n"
+"POT-Creation-Date: 2023-11-15 10:49+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,17 +16,19 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
 #: .\eeorw_app\templates\about_us.html:5
 #: .\eeorw_app\templates\components\_footer.html:49
 #: .\eeorw_app\templates\components\base.html:12
 #: .\eeorw_app\templates\components\base.html:14
 #: .\eeorw_app\templates\components\base.html:16
-#: .\eeorw_app\templates\components\base.html:53
+#: .\eeorw_app\templates\components\base.html:50
 msgid "Enhancing economic opportunities for rural women"
-msgstr "Расширение экономических прав и возможностей сельских женщин в Узбекистане"
+msgstr ""
+"Расширение экономических прав и возможностей сельских женщин в Узбекистане"
 
 #: .\eeorw_app\templates\about_us.html:16 .\eeorw_app\templates\home.html:81
 msgid "About Us"
@@ -37,8 +39,8 @@ msgid ""
 "Project \"Economic Empowerment of Rural Women\" with the participation of "
 "grants from the World Bank and the Japan Social Development Fund"
 msgstr ""
-"Проект «Расширение экономических возможностей сельских женщин» с "
-"участием грантов Всемирного банка и Японского фонда социального развития"
+"Проект «Расширение экономических возможностей сельских женщин» с участием "
+"грантов Всемирного банка и Японского фонда социального развития"
 
 #: .\eeorw_app\templates\components\_footer.html:12
 msgid "Join us in social networks:"
@@ -49,67 +51,73 @@ msgid "Links"
 msgstr "Ссылки"
 
 #: .\eeorw_app\templates\components\_footer.html:63
-#: .\eeorw_app\templates\components\base.html:96
+#: .\eeorw_app\templates\components\base.html:93
 #: .\eeorw_app\templates\home.html:13 .\eeorw_app\templates\news.html:5
 #: .\eeorw_app\templates\news.html:16
 msgid "News"
 msgstr "Новости"
 
 #: .\eeorw_app\templates\components\_footer.html:66
+#: .\eeorw_app\templates\components\base.html:96
+#: .\eeorw_app\templates\document.html:5 .\eeorw_app\templates\document.html:23
+msgid "Documents"
+msgstr "Документы"
+
+#: .\eeorw_app\templates\components\_footer.html:69
 #: .\eeorw_app\templates\components\base.html:108
 #: .\eeorw_app\templates\components\base.html:113
 msgid "About us"
 msgstr "О нас"
 
-#: .\eeorw_app\templates\components\_footer.html:69
+#: .\eeorw_app\templates\components\_footer.html:72
 #: .\eeorw_app\templates\components\base.html:116
 #: .\eeorw_app\templates\piu_staff.html:5
 #: .\eeorw_app\templates\piu_staff.html:15
 msgid "PIU Staff"
 msgstr "Сотрудники ГРП"
 
-#: .\eeorw_app\templates\components\_footer.html:74
+#: .\eeorw_app\templates\components\_footer.html:77
 msgid "Vacancy"
 msgstr "Вакансии"
 
-#: .\eeorw_app\templates\components\_footer.html:77 .\eeorw_app\templates\components\_footer.html:112
+#: .\eeorw_app\templates\components\_footer.html:80
+#: .\eeorw_app\templates\components\_footer.html:115
 #: .\eeorw_app\templates\components\base.html:121
 #: .\eeorw_app\templates\contact.html:4 .\eeorw_app\templates\contact.html:25
 msgid "Contacts"
 msgstr "Контакты"
 
-#: .\eeorw_app\templates\components\_footer.html:90
+#: .\eeorw_app\templates\components\_footer.html:93
 msgid "Opening hours"
 msgstr "Часы работы"
 
-#: .\eeorw_app\templates\components\_footer.html:95
+#: .\eeorw_app\templates\components\_footer.html:98
 msgid "Mon-Fri"
 msgstr "Пн-Пт"
 
-#: .\eeorw_app\templates\components\_footer.html:99
+#: .\eeorw_app\templates\components\_footer.html:102
 msgid "Saturday"
 msgstr "Суббота"
 
-#: .\eeorw_app\templates\components\_footer.html:100
-#: .\eeorw_app\templates\components\_footer.html:104
+#: .\eeorw_app\templates\components\_footer.html:103
+#: .\eeorw_app\templates\components\_footer.html:107
 msgid "Closed"
 msgstr "Закрыто"
 
-#: .\eeorw_app\templates\components\_footer.html:103
+#: .\eeorw_app\templates\components\_footer.html:106
 msgid "Sunday"
 msgstr "Воскресенье"
 
-
-#: .\eeorw_app\templates\components\_footer.html:116
+#: .\eeorw_app\templates\components\_footer.html:119
 #: .\eeorw_app\templates\contact.html:71
 msgid "Tashkent, Mirzo Ulugbek district, M. Ismaili street 1G"
 msgstr "г.Ташкент, Мирзо Улугбекский район, улица М.Исмаили 1Г"
 
-#: .\eeorw_app\templates\components\_footer.html:124
+#: .\eeorw_app\templates\components\_footer.html:127
 msgid "While using the site information, a link to the source is required"
 msgstr "При использовании информации сайта ссылка на источник обязательна"
 
-#: .\eeorw_app\templates\components\base.html:58
+#: .\eeorw_app\templates\components\base.html:55
 msgid "E-mail"
 msgstr ""
 
@@ -153,6 +161,22 @@ msgstr "Сообщение"
 #: .\eeorw_app\templates\contact.html:114
 msgid "Send Message"
 msgstr "Отправить"
+
+#: .\eeorw_app\templates\document.html:33
+msgid "Title"
+msgstr "Название"
+
+#: .\eeorw_app\templates\document.html:34
+msgid "Open"
+msgstr "Открыть"
+
+#: .\eeorw_app\templates\document.html:35
+msgid "Download"
+msgstr "Скачать"
+
+#: .\eeorw_app\templates\document.html:36
+msgid "Date"
+msgstr "Дата"
 
 #: .\eeorw_app\templates\faq.html:31
 msgid "Frequently asked questions"

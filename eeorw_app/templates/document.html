@@ -1,0 +1,78 @@
+{% extends 'components/base.html' %}
+{% load static i18n%}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block title %}{% trans "Documents"%}{% endblock title %}
+
+{% block content %}
+<style>
+  .mytable a{
+      font-weight: bold;
+  }
+  a:hover {
+  color: #00aeef;
+}
+    </style>
+<div class="row-fluid mb-5">
+    <div class="bg-image"
+         style="background-image: url({% static 'eeorw_app/bg-img/banner_vector.webp' %});
+                height: 500px;">
+
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <p class="text-white mb-0 h1">{% translate 'Documents' %}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container table-responsive mt-50 mb-100">
+    <table class="table table-hover text-center shadow-sm" style="border-radius: 7px; overflow: hidden">
+        <thead class="shadow-sm">
+            <tr class="card-header text-white font-weight-normal" style="background-color: #006262;">
+                <th scope="col" style="width: 50%">{% trans "Title"%}</th>
+                <th scope="col" style="width: 16.66%">{% trans "Open"%}</th>
+                <th scope="col" style="width: 16.66%">{% trans "Download"%}</th>
+                <th scope="col" style="width: 16.66%">{% trans "Date"%}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for document in documents %}
+            <tr class = "mytable">
+                <th scope="row">
+                    {% if LANGUAGE_CODE == 'en' %}
+                    {{ document.title_en }}
+                        {% elif LANGUAGE_CODE == 'ru' %}
+                        {{ document.title_ru }}
+                        {% elif LANGUAGE_CODE == 'uz' %}
+                        {{ document.title_uz }}
+                    {% endif %}
+                </th>
+                <td>{% if document.file_en %}<a href="../../media/{{document.file_en}}" target="_blank">Eng</a>{% endif %}{% if document.file_uz %}<span> | </span><a href="../../media/{{document.file_uz}}" target="_blank">Uzb</a>{% endif %}{% if document.file_ru %}<span> | </span><a href="../../media/{{document.file_ru}}" target="_blank">Рус</a>{% endif %}</td>
+                <td>{% if document.file_en %}<a href="../../media/{{document.file_en}}" download="{{ document.title_en }}">Eng</a>{% endif %}{% if document.file_uz %}<span> | </span><a href="../../media/{{document.file_uz}}" download="{{ document.title_uz }}">Uzb</a>{% endif %}{% if document.file_ru %}<span> | </span><a href="../../media/{{document.file_ru}}" download="{{ document.title_ru }}">Рус</a>{% endif %}</td>
+                <td>{{ document.date}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% if documents.has_other_pages %}
+              <nav class="dento-pagination">
+                  <ul class="pagination">
+                    {% if documents.has_previous %}
+                      <li class="page-item"><a class="page-link" href="?page={{ documents.previous_page_number }}">&laquo;</a></li>
+                    {% endif %}
+                    {% for i in documents.paginator.page_range %}
+                      {% if documents.number == i %}
+                        <li class="page-item active"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                      {% else %}
+                        <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                      {% endif %}
+                    {% endfor %}
+                    {% if documents.has_next %}
+                      <li class="page-item"><a class="page-link" href="?page={{ documents.next_page_number }}">&raquo;</a></li>
+                    {% endif %}
+                  </ul>
+              </nav>
+    {% endif %}
+</div>
+{% endblock content %}
