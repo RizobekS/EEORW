@@ -52,11 +52,11 @@
                         </a></h5>
                         <p class="card-text">
                             {% if LANGUAGE_CODE == 'en' %}
-                            {{ list.description_en|default_if_none:""|safe|truncatechars:500 }}
+                            {{ list.description_en|default_if_none:""|safe|truncatechars:250 }}
                             {% elif LANGUAGE_CODE == 'ru' %}
-                            {{ list.description_ru|default_if_none:""|safe|truncatechars:500 }}
+                            {{ list.description_ru|default_if_none:""|safe|truncatechars:250 }}
                             {% elif LANGUAGE_CODE == 'uz' %}
-                            {{ list.description_uz|default_if_none:""|safe|truncatechars:500 }}
+                            {{ list.description_uz|default_if_none:""|safe|truncatechars:250 }}
                             {% endif %}
                         </p>
                         <p class="card-text"><small class="text-muted">
@@ -72,47 +72,6 @@
         <a href="{% url 'news' %}">
             <div class="btn btn-success bg-gradient">{% translate 'All news' %}</div>
         </a>
-    </div>
-    <div class="row-fluid mt-5">
-        <h2 class="text-center"
-            data-aos="fade-left"
-            data-aos-anchor="#example-anchor"
-            data-aos-offset="500"
-            data-aos-duration="500">{% translate "About Us" %}</h2>
-        <div class="line"
-             data-aos="fade-right"
-             data-aos-offset="300"
-             data-aos-easing="ease-in-sine">
-        </div>
-        <div class="container">
-            <div class="row-fluid mt-5 mb-5">
-                <div class="d-flex justify-content-between row">
-                    <div class="col-sm-12 col-md-6">
-                        {% if LANGUAGE_CODE == 'en' %}
-                        {{ info_about.about_en|safe|linebreaksbr }}
-                        {% elif LANGUAGE_CODE == 'uz' %}
-                        {{ info_about.about_uz|safe|linebreaksbr }}
-                        {% elif LANGUAGE_CODE == 'ru' %}
-                        {{ info_about.about_ru|safe|linebreaksbr }}
-                        {% endif %}
-                    </div>
-                    <div class="col-sm-12 col-md-6" data-aos="zoom-out">
-                        {% if info_about.image_en %}
-                        {% if LANGUAGE_CODE == 'en' and info_about.image_en %}
-                        <img src="{{ info_about.image_en.url }}" class="lazy img-fluid rounded hover-shadow"
-                             alt="uzrd About us">
-                        {% elif LANGUAGE_CODE == 'ru' and info_about.image_ru %}
-                        <img src="{{ info_about.image_ru.url }}" class="lazy img-fluid rounded hover-shadow"
-                             alt="uzrd About us">
-                        {% else %}
-                        <img src="{{ info_about.image_uz.url }}" class="lazy img-fluid rounded hover-shadow"
-                             alt="uzrd About us">
-                        {% endif %}
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 {% endblock content %}
