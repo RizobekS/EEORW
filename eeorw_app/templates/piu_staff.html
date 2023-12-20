@@ -28,9 +28,15 @@
             {% for staff_member in staff_piu %}
             <div class="col-12 col-sm-6 col-md-4 mb-5">
                 <div class="card text-center" data-aos="flip-up">
+                    {% if staff_member.image %}
                     <div class="bg-image hover-overlay rounded-9" data-mdb-ripple-color="light">
                         <img src="{{ staff_member.image.url }}" alt="JPIU Staff Image" class="img-fluid"/>
                     </div>
+                    {% else %}
+                    <div class="bg-image hover-overlay rounded-9" data-mdb-ripple-color="light">
+                        <img src="{% static 'eeorw_app/img-core/avatar.jpg'' %}" alt="JPIU Staff Image" class="img-fluid"/>
+                    </div>
+                    {% endif %}
                     <div class="card-body">
                         <h5 class="card-title">
                             {% if LANGUAGE_CODE == 'en' %}
@@ -64,9 +70,11 @@
             {% for staff_member in staff_jizzakh %}
             <div class="col-12 col-sm-6 col-md-4 mb-5">
                 <div class="card text-center" data-aos="flip-up">
+                    {% if staff_member.image %}
                     <div class="bg-image hover-overlay rounded-9" data-mdb-ripple-color="light">
                         <img src="{{ staff_member.image.url }}" alt="JPIU Staff Image" class="img-fluid"/>
                     </div>
+                    {% endif %}
                     <div class="card-body">
                         <h5 class="card-title">
                             {% if LANGUAGE_CODE == 'en' %}
@@ -101,9 +109,11 @@
             {% for staff_member in staff_fergana %}
             <div class="col-12 col-sm-6 col-md-4 mb-5">
                 <div class="card text-center" data-aos="flip-up">
+                    {% if staff_member.image %}
                     <div class="bg-image hover-overlay rounded-9" data-mdb-ripple-color="light">
                         <img src="{{ staff_member.image.url }}" alt="JPIU Staff Image" class="img-fluid"/>
                     </div>
+                    {% endif %}
                     <div class="card-body">
                         <h5 class="card-title">
                             {% if LANGUAGE_CODE == 'en' %}
