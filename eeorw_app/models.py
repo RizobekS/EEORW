@@ -246,7 +246,7 @@ class PIUStaff(models.Model):
 
     image = ResizedImageField(upload_to='images/piu/staff',
                               validators=[FileExtensionValidator(allowed_extensions=['jpeg', 'png', 'jpg'])], null=True,
-                              blank=True, unique=True, quality=65)
+                              blank=True, quality=65)
 
     def __str__(self):
         return self.title_en
