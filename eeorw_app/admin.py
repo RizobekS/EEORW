@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import News, Contact, AboutPage, FAQ, Document
+from .models import News, Contact, AboutPage, FAQ, Document, PIUStaff
 
 
 class NewsAdmin(admin.ModelAdmin):
@@ -39,9 +39,15 @@ class FAQAdmin(admin.ModelAdmin):
     search_fields = ['question_en', 'question_uz', 'question_ru']
 
 
+class PIUStaffAdmin(admin.ModelAdmin):
+    list_display = ['title_en', 'name', 'rank', 'office', 'image']
+    search_fields = ['title_en', 'title_ru', 'title_uz', 'name', 'name_ru', 'name_uz']
+
+
 admin.site.site_header = "Enhancing economic opportunities for rural women"
 admin.site.register(News, NewsAdmin)
 admin.site.register(Document, DocumentAdmin)
 admin.site.register(AboutPage, AboutPageAdmin)
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(FAQ, FAQAdmin)
+admin.site.register(PIUStaff, PIUStaffAdmin)

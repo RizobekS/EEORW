@@ -74,14 +74,12 @@
                 <!-- Blog Details Area -->
                 <div class="blog-details-area">
                     <div class="img_news text-center mb-5" data-aos="zoom-out">
-                        {% if detail.image %}
                         {% if LANGUAGE_CODE == 'en' and detail.image %}
                         <img src="{{ detail.image.url }}" class="lazy img-fluid rounded hover-shadow" alt="uzrd news image">
                         {% elif LANGUAGE_CODE == 'ru' and detail.image_ru %}
                         <img src="{{ detail.image_ru.url }}" class="lazy img-fluid rounded hover-shadow" alt="uzrd news image">
-                        {% else %}
+                        {% elif LANGUAGE_CODE == 'uz' and detail.image_uz %}
                         <img src="{{ detail.image_uz.url }}" class="lazy img-fluid rounded hover-shadow" alt="uzrd news image">
-                        {% endif %}
                         {% endif %}
                     </div>
                     <h2 class="post-title">
