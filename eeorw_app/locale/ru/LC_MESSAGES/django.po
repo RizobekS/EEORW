@@ -28,7 +28,7 @@ msgstr ""
 #: .\eeorw_app\templates\components\base.html:50
 msgid "Enhancing economic opportunities for rural women"
 msgstr ""
-"Расширение экономических прав и возможностей сельских женщин в Узбекистане"
+"Расширение экономических возможностей сельских женщин в Узбекистане"
 
 #: .\eeorw_app\templates\about_us.html:16 .\eeorw_app\templates\home.html:81
 msgid "About Us"
