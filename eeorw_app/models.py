@@ -250,3 +250,23 @@ class PIUStaff(models.Model):
 
     def __str__(self):
         return self.title_en
+
+
+class Gallery(models.Model):
+    class Meta:
+        verbose_name = 'Gallery'
+        verbose_name_plural = 'Galleries'
+
+    title_en = RichTextUploadingField(max_length=255, null=True)
+    title_ru = RichTextUploadingField(max_length=255, null=True, blank=True)
+    title_uz = RichTextUploadingField(max_length=255, null=True, blank=True)
+    date = models.DateTimeField(auto_now=True, null=True)
+
+    image = ResizedImageField(upload_to='gallery/images/',
+                              validators=[FileExtensionValidator(allowed_extensions=['jpeg', 'png', 'jpg'])], null=True,
+                              blank=True, quality=65)
+
+    video = FileField(upload_to='gallery/videos/',
+                      validators=[
+                          FileExtensionValidator(allowed_extensions=['mp4', 'avi', 'mov', 'wmv', 'flv', 'gif'])],
+                      null=True, blank=True)

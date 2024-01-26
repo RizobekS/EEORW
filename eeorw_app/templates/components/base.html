@@ -34,6 +34,12 @@
     <link href="{% static '/eeorw_app/css/mdb.min.css' %}" rel="stylesheet"/>
     <!-- AOS -->
 <!--    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">-->
+
+
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 </head>
 <body>
 <!--Top header end-->
@@ -118,6 +124,9 @@
                             </ul>
                         </li>
                         <li class="nav-item me-3">
+                            <a class="nav-link" href="{% url 'gallery' %}">{% translate "Gallery" %}</a>
+                        </li>
+                        <li class="nav-item me-3">
                             <a class="nav-link" href="{% url 'contact' %}">{% translate "Contacts" %}</a>
                         </li>
                         <li class="nav-item me-3">
@@ -158,28 +167,28 @@
 
 
 {% block content %} {% endblock content %}
-<button
-        type="button"
-        class="btn btn-success btn-floating btn-lg mb-5"
-        id="btn-back-to-top">
-    <i class="p-0 fas fa-arrow-up"></i>
-</button>
+    <button
+            type="button"
+            class="btn btn-success btn-floating btn-lg mb-5"
+            id="btn-back-to-top">
+        <i class="p-0 fas fa-arrow-up"></i>
+    </button>
 
 {% include 'components/_footer.html' %}
 
 
 <!--<script src="{% static '/jpiu_app/js/bootstrap.bundle.min.js' %}"></script>-->
-<!-- MDB -->
-<script type="text/javascript" src="{% static '/eeorw_app/js/mdb.min.js' %}"></script>
-<script src="{% static '/eeorw_app/js/button_top.js' %}"></script>
-<!--<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>-->
-<script>
-  AOS.init();
+    <!-- MDB -->
+    <script type="text/javascript" src="{% static '/eeorw_app/js/mdb.min.js' %}"></script>
+    <script src="{% static '/eeorw_app/js/button_top.js' %}"></script>
+    <!--<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>-->
+    <script>
+        AOS.init();
 
 
 
 
-</script>
-
+    </script>
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
 </body>
 </html>

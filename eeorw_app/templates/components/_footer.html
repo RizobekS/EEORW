@@ -73,14 +73,17 @@
                             </p>
                         </div>
                         <div>
+<!--                            <p>-->
+<!--                                <a href="{% url 'home' %}" class="quick-link">{% translate "Vacancy" %}</a>-->
+<!--                            </p>-->
                             <p>
-                                <a href="{% url 'home' %}" class="quick-link">{% translate "Vacancy" %}</a>
+                                <a href="{% url 'gallery' %}" class="quick-link">{% translate "Gallery" %}</a>
                             </p>
                             <p>
-                                <a href="{% url 'home' %}" class="quick-link">{% translate "Contacts" %}</a>
+                                <a href="{% url 'contact' %}" class="quick-link">{% translate "Contacts" %}</a>
                             </p>
                             <p>
-                                <a href="{% url 'home' %}" class="quick-link">F.A.Q</a>
+                                <a href="{% url 'faq' %}" class="quick-link">F.A.Q</a>
                             </p>
                         </div>
                     </div>
@@ -136,7 +139,7 @@
     <!-- Copyright -->
     <div class="text-center text-muted p-4" style="background-color: rgba(0, 0, 0, 0.05);">
         Powered by <a href="https://t.me/WEBadiko" target="_blank" class="quick-link me-0">WEBadiko</a><br>
-        <script>document.write(new Date().getFullYear());</script>
+        {% translate "Enhancing economic opportunities for rural women" %} <script>document.write(new Date().getFullYear());</script>
 
     </div>
     <!-- Copyright -->

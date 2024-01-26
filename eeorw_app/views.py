@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from .forms import ContactForm
-from .models import News, AboutPage, PIUStaff, FAQ, Document
+from .models import News, AboutPage, PIUStaff, FAQ, Document, Gallery
 
 
 def home(request):
@@ -86,6 +86,11 @@ def contact(request):
             return render(request, 'contact.html', {'name': name})
     else:
         return render(request, 'contact.html', {})
+
+
+def gallery(request):
+    galleries = Gallery.objects.all()
+    return render(request, 'gallery.html', {'galleries': galleries})
 
 
 def about(request):
