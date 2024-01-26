@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-15 10:49+0500\n"
+"POT-Creation-Date: 2024-01-26 15:01+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,15 +22,15 @@ msgstr ""
 
 #: .\eeorw_app\templates\about_us.html:5
 #: .\eeorw_app\templates\components\_footer.html:49
+#: .\eeorw_app\templates\components\_footer.html:142
 #: .\eeorw_app\templates\components\base.html:12
 #: .\eeorw_app\templates\components\base.html:14
 #: .\eeorw_app\templates\components\base.html:16
-#: .\eeorw_app\templates\components\base.html:50
+#: .\eeorw_app\templates\components\base.html:56
 msgid "Enhancing economic opportunities for rural women"
-msgstr ""
-"Расширение экономических возможностей сельских женщин в Узбекистане"
+msgstr "Расширение экономических возможностей сельских женщин в Узбекистане"
 
-#: .\eeorw_app\templates\about_us.html:16 .\eeorw_app\templates\home.html:81
+#: .\eeorw_app\templates\about_us.html:16
 msgid "About Us"
 msgstr "О нас"
 
@@ -51,26 +51,26 @@ msgid "Links"
 msgstr "Ссылки"
 
 #: .\eeorw_app\templates\components\_footer.html:63
-#: .\eeorw_app\templates\components\base.html:93
-#: .\eeorw_app\templates\home.html:13 .\eeorw_app\templates\news.html:5
+#: .\eeorw_app\templates\components\base.html:99
+#: .\eeorw_app\templates\home.html:81 .\eeorw_app\templates\news.html:5
 #: .\eeorw_app\templates\news.html:16
 msgid "News"
 msgstr "Новости"
 
 #: .\eeorw_app\templates\components\_footer.html:66
-#: .\eeorw_app\templates\components\base.html:96
+#: .\eeorw_app\templates\components\base.html:102
 #: .\eeorw_app\templates\document.html:5 .\eeorw_app\templates\document.html:23
 msgid "Documents"
 msgstr "Документы"
 
 #: .\eeorw_app\templates\components\_footer.html:69
-#: .\eeorw_app\templates\components\base.html:108
-#: .\eeorw_app\templates\components\base.html:113
+#: .\eeorw_app\templates\components\base.html:114
+#: .\eeorw_app\templates\components\base.html:119
 msgid "About us"
 msgstr "О нас"
 
 #: .\eeorw_app\templates\components\_footer.html:72
-#: .\eeorw_app\templates\components\base.html:116
+#: .\eeorw_app\templates\components\base.html:122
 #: .\eeorw_app\templates\piu_staff.html:5
 #: .\eeorw_app\templates\piu_staff.html:15
 msgid "PIU Staff"
@@ -81,47 +81,53 @@ msgid "Vacancy"
 msgstr "Вакансии"
 
 #: .\eeorw_app\templates\components\_footer.html:80
-#: .\eeorw_app\templates\components\_footer.html:115
-#: .\eeorw_app\templates\components\base.html:121
+#: .\eeorw_app\templates\components\base.html:127
+#: .\eeorw_app\templates\gallery.html:5 .\eeorw_app\templates\gallery.html:15
+msgid "Gallery"
+msgstr "Галерея"
+
+#: .\eeorw_app\templates\components\_footer.html:83
+#: .\eeorw_app\templates\components\_footer.html:118
+#: .\eeorw_app\templates\components\base.html:130
 #: .\eeorw_app\templates\contact.html:4 .\eeorw_app\templates\contact.html:25
 msgid "Contacts"
 msgstr "Контакты"
 
-#: .\eeorw_app\templates\components\_footer.html:93
+#: .\eeorw_app\templates\components\_footer.html:96
 msgid "Opening hours"
 msgstr "Часы работы"
 
-#: .\eeorw_app\templates\components\_footer.html:98
+#: .\eeorw_app\templates\components\_footer.html:101
 msgid "Mon-Fri"
 msgstr "Пн-Пт"
 
-#: .\eeorw_app\templates\components\_footer.html:102
+#: .\eeorw_app\templates\components\_footer.html:105
 msgid "Saturday"
 msgstr "Суббота"
 
-#: .\eeorw_app\templates\components\_footer.html:103
-#: .\eeorw_app\templates\components\_footer.html:107
+#: .\eeorw_app\templates\components\_footer.html:106
+#: .\eeorw_app\templates\components\_footer.html:110
 msgid "Closed"
 msgstr "Закрыто"
 
-#: .\eeorw_app\templates\components\_footer.html:106
+#: .\eeorw_app\templates\components\_footer.html:109
 msgid "Sunday"
 msgstr "Воскресенье"
 
-#: .\eeorw_app\templates\components\_footer.html:119
+#: .\eeorw_app\templates\components\_footer.html:122
 #: .\eeorw_app\templates\contact.html:71
 msgid "Tashkent, Mirzo Ulugbek district, M. Ismaili street 1G"
 msgstr "г.Ташкент, Мирзо Улугбекский район, улица М.Исмаили 1Г"
 
-#: .\eeorw_app\templates\components\_footer.html:127
+#: .\eeorw_app\templates\components\_footer.html:130
 msgid "While using the site information, a link to the source is required"
 msgstr "При использовании информации сайта ссылка на источник обязательна"
 
-#: .\eeorw_app\templates\components\base.html:55
+#: .\eeorw_app\templates\components\base.html:61
 msgid "E-mail"
 msgstr ""
 
-#: .\eeorw_app\templates\components\base.html:124
+#: .\eeorw_app\templates\components\base.html:133
 #: .\eeorw_app\templates\faq.html:5
 msgid "FAQ"
 msgstr ""
@@ -190,16 +196,24 @@ msgstr "Не нашли ответ здесь?"
 msgid "Contact our support team"
 msgstr "Свяжитесь с нашей службой поддержки"
 
-#: .\eeorw_app\templates\home.html:73
+#: .\eeorw_app\templates\gallery.html:24
+msgid "Pictures"
+msgstr "Фотографии"
+
+#: .\eeorw_app\templates\gallery.html:40
+msgid "Videos"
+msgstr "Видео"
+
+#: .\eeorw_app\templates\home.html:141
 msgid "All news"
 msgstr "Все новости"
 
-#: .\eeorw_app\templates\news-details.html:304
-#: .\eeorw_app\templates\news-details.html:308
+#: .\eeorw_app\templates\news-details.html:302
+#: .\eeorw_app\templates\news-details.html:306
 msgid "Share"
 msgstr "Поделиться"
 
-#: .\eeorw_app\templates\news-details.html:306
+#: .\eeorw_app\templates\news-details.html:304
 msgid "Send"
 msgstr "Отправить"
 
@@ -207,10 +221,10 @@ msgstr "Отправить"
 msgid "Project Implementation Unit Staff"
 msgstr "Персонал группы реализации проекта"
 
-#: .\eeorw_app\templates\piu_staff.html:60
+#: .\eeorw_app\templates\piu_staff.html:66
 msgid "Jizzakh interregional Project Implementation Unit office"
 msgstr "Джизакский межрегиональный офис Группы Реализации Проекта"
 
-#: .\eeorw_app\templates\piu_staff.html:97
+#: .\eeorw_app\templates\piu_staff.html:105
 msgid "Fergana interregional Project Implementation Unit office"
 msgstr "Ферганский межрегиональный офис Группы Реализации Проекта"

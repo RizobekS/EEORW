@@ -21,7 +21,7 @@
 
 <div class="container text-center mb-5">
     <div class="row">
-        <h1>Pictures</h1>
+        <h1>{% trans 'Pictures' %}</h1>
         {% for gallery in galleries %}
         {% if gallery.image %}
         <div class="d-flex justify-content-between rounded-9 col-12 col-sm-6 col-md-6 col-lg-4">
@@ -37,7 +37,7 @@
 
 <div class="container text-center mb-5">
     <div class="row">
-        <h1>Videos</h1>
+        <h1>{% trans 'Videos' %}</h1>
         {% for gallery in galleries %}
         {% if gallery.video %}
         <div class="ratio ratio-16x9 d-flex justify-content-between me-2 mb-5">
