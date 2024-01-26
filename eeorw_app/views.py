@@ -89,7 +89,7 @@ def contact(request):
 
 
 def gallery(request):
-    galleries = Gallery.objects.all()
+    galleries = Gallery.objects.order_by('-date').all()
     return render(request, 'gallery.html', {'galleries': galleries})
 
 
