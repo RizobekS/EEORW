@@ -1,6 +1,6 @@
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.core.mail import send_mail
-from django.core.validators import FileExtensionValidator
+from django.core.validators import FileExtensionValidator, MinValueValidator, MaxValueValidator
 from django.db import models
 from django.db.models import FileField
 from django.urls import reverse
@@ -8,6 +8,143 @@ from django.utils import timezone
 from django_resized import ResizedImageField
 
 from eeorw.settings import EMAIL_HOST_USER
+
+
+class Region(models.Model):
+    class Meta:
+        verbose_name = 'Region'
+        verbose_name_plural = 'Regions'
+
+    title_en = models.CharField(max_length=255)
+    title_uz = models.CharField(max_length=255)
+    title_ru = models.CharField(max_length=255)
+    lat = models.CharField(max_length=255)
+    lng = models.CharField(max_length=255)
+    zoom = models.IntegerField()
+
+    def __str__(self):
+        return self.title_en
+
+
+class District(models.Model):
+    class Meta:
+        verbose_name = 'District'
+        verbose_name_plural = 'Districts'
+
+    region = models.ForeignKey(Region, on_delete=models.CASCADE)
+    title_en = models.CharField(max_length=255)
+    title_uz = models.CharField(max_length=255)
+    title_ru = models.CharField(max_length=255)
+    lat = models.CharField(max_length=255, blank=True, null=True)
+    lng = models.CharField(max_length=255, blank=True, null=True)
+    zoom = models.IntegerField(blank=True, null=True)
+
+    num_of_vil = models.IntegerField(default=None, blank=True, null=True)
+    budget = models.IntegerField(default=None, blank=True, null=True)
+
+    def __str__(self):
+        return self.title_en
+
+
+class Village(models.Model):
+    class Meta:
+        verbose_name = 'Village'
+        verbose_name_plural = 'Villages'
+
+    district = models.ForeignKey(District, on_delete=models.CASCADE)
+    title_en = models.CharField(max_length=255, unique=True)
+    title_uz = models.CharField(max_length=255)
+    title_ru = models.CharField(max_length=255)
+    id_villages = models.IntegerField(null=True, blank=True, unique=True)
+    lat = models.CharField(max_length=255)
+    lng = models.CharField(max_length=255)
+    zoom = models.IntegerField()
+
+    def __str__(self):
+        return self.title_en
+
+
+class VillageDocuments(models.Model):
+    class Meta:
+        verbose_name = 'Village Document'
+        verbose_name_plural = 'Village Documents'
+
+    village = models.ForeignKey(Village, on_delete=models.CASCADE)
+
+    title_en = models.CharField(max_length=255, null=True)
+    title_uz = models.CharField(max_length=255, null=True)
+    title_ru = models.CharField(max_length=255, null=True)
+
+    file = models.FileField(upload_to='documents/village_documents/',
+                            validators=[FileExtensionValidator(allowed_extensions=['pdf'])], null=True)
+
+    date = models.DateField(null=True)
+
+    def __str__(self):
+        return self.title_en
+
+
+class SocialAudit(models.Model):
+    class Meta:
+        verbose_name = 'Social Audit'
+        verbose_name_plural = 'Social Audit'
+
+    village = models.OneToOneField(Village, on_delete=models.CASCADE)
+    number_of_audits = models.IntegerField(blank=True, null=True,
+                                           validators=[MinValueValidator(0), MaxValueValidator(3)],
+                                           verbose_name="Number of social audits that have been "
+                                                        "completed across the targeted rural qishloqs")
+    one_a = models.IntegerField(blank=True,
+                                null=True,
+                                verbose_name="1(a). Percentage of sampled respondents who report improvements "
+                                             "in the quality of basic rural infrastructure",
+                                validators=[MinValueValidator(0), MaxValueValidator(100)])
+    one_b = models.IntegerField(blank=True,
+                                null=True,
+                                verbose_name="1(b). of which female ",
+                                validators=[MinValueValidator(0), MaxValueValidator(100)])
+    two_a = models.IntegerField(blank=True,
+                                null=True,
+                                verbose_name="2(a). Percentage of beneficiaries who participate in planning, "
+                                             "decision-making, or monitoring subprojects",
+                                validators=[MinValueValidator(0), MaxValueValidator(100)])
+    two_b = models.IntegerField(blank=True,
+                                null=True,
+                                verbose_name="2(b). of which female ",
+                                validators=[MinValueValidator(0), MaxValueValidator(100)])
+    one_point_two = models.IntegerField(blank=True,
+                                        null=True,
+                                        verbose_name="1.2(a). Percentage of sampled respondents reporting improved "
+                                                     "access to basic rural infrastructure",
+                                        validators=[MinValueValidator(0), MaxValueValidator(100)])
+    one_point_two_b = models.IntegerField(blank=True,
+                                          null=True,
+                                          verbose_name="1.2(b). of which female ",
+                                          validators=[MinValueValidator(0), MaxValueValidator(100)])
+    one_point_three = models.IntegerField(blank=True,
+                                          null=True,
+                                          verbose_name="1.3(a) Percentage of sampled respondents "
+                                                       "who report that the project "
+                                                       "investments in basic rural infrastructure meet their needs",
+                                          validators=[MinValueValidator(0), MaxValueValidator(100)])
+    one_point_three_b = models.IntegerField(blank=True,
+                                            null=True,
+                                            verbose_name="1.3(b). of which female ",
+                                            validators=[MinValueValidator(0), MaxValueValidator(100)])
+    improved_water = models.IntegerField(blank=True,
+                                         null=True,
+                                         verbose_name="1.5 Percentage of beneficiaries in targeted rural qishloqs "
+                                                      "with improved quality of water supply as a result of "
+                                                      "project investments",
+                                         validators=[MinValueValidator(0), MaxValueValidator(100)])
+    woman_funding = models.IntegerField(blank=True,
+                                        null=True,
+                                        verbose_name="2.4 Percentage of women's priorities that "
+                                                     "receive subproject funding",
+                                        validators=[MinValueValidator(0), MaxValueValidator(100)])
+
+    def __str__(self):
+        return self.village.title_en
 
 
 class News(models.Model):

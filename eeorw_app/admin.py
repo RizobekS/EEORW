@@ -1,5 +1,100 @@
 from django.contrib import admin
-from .models import News, Contact, AboutPage, FAQ, Document, PIUStaff, Gallery
+from .models import News, Contact, AboutPage, FAQ, Document, PIUStaff, Gallery, Region, District, Village, \
+    VillageDocuments, SocialAudit
+from eeorw import settings
+
+
+class VillageAdmin(admin.ModelAdmin):
+    list_display = ['district', 'id_villages', 'title_en', 'title_uz', 'title_ru', 'lat', 'lng', 'zoom']
+    search_fields = ['district__title_en', 'title_en', 'title_uz', 'title_ru', 'id_villages']
+
+    def unique_id(self, obj):
+        return f"{obj.district.region.id:02}{obj.district.id:02}{obj.id:03}"
+
+    fieldsets = (
+        (None, {
+            'fields': ('district', 'title_en', 'title_uz', 'title_ru', 'id_villages', 'lat', 'lng', 'zoom')
+        }),
+    )
+
+    class Media:
+        if hasattr(settings, 'GOOGLE_MAP_API') and settings.GOOGLE_MAP_API:
+            css = {
+                'all': ('admin/css/location_picker.css',),
+            }
+            js = (
+                'https://maps.googleapis.com/maps/api/js?key={}'.format(settings.GOOGLE_MAP_API),
+                'admin/js/location_picker.js',
+            )
+
+
+class VillageDocumentsAdmin(admin.ModelAdmin):
+    list_display = ['village', 'title_en', 'title_uz', 'title_ru', 'date']
+    search_fields = ['village__title_en', 'title_en', 'title_uz', 'title_ru']
+
+
+class DistrictAdmin(admin.ModelAdmin):
+    list_display = ['region', 'title_en', 'title_uz', 'title_ru', 'lat', 'lng', 'zoom', 'num_of_vil', 'budget']
+    search_fields = ['region__title_en', 'title_en']
+    list_editable = ['num_of_vil', 'budget']
+
+    fieldsets = (
+        (None, {
+            'fields': ('region', 'title_en', 'title_uz', 'title_ru', 'lat', 'lng', 'zoom', 'num_of_vil', 'budget')
+        }),
+    )
+
+    class Media:
+        if hasattr(settings, 'GOOGLE_MAP_API') and settings.GOOGLE_MAP_API:
+            css = {
+                'all': ('admin/css/location_picker.css',),
+            }
+            js = (
+                'https://maps.googleapis.com/maps/api/js?key={}'.format(settings.GOOGLE_MAP_API),
+                'admin/js/location_picker.js',
+            )
+
+
+class RegionAdmin(admin.ModelAdmin):
+    list_display = ['id', 'title_en', 'title_uz', 'title_ru', 'lat', 'lng', 'zoom']
+    search_fields = ['id', 'title_en']
+
+    fieldsets = (
+        (None, {
+            'fields': ('title_en', 'title_uz', 'title_ru', 'lat', 'lng', 'zoom')
+        }),
+    )
+
+    class Media:
+        if hasattr(settings, 'GOOGLE_MAP_API') and settings.GOOGLE_MAP_API:
+            css = {
+                'all': ('admin/css/location_picker.css',),
+            }
+            js = (
+                'https://maps.googleapis.com/maps/api/js?key={}'.format(settings.GOOGLE_MAP_API),
+                'admin/js/location_picker.js',
+            )
+
+
+class SocialAuditAdmin(admin.ModelAdmin):
+
+    class Media:
+        css = {
+            'all': ('admin/css/fancy.css',),
+        }
+
+    list_display = ['village', 'number_of_audits',
+                    # 'one_a', 'one_b', 'two_a', 'two_b', 'one_point_two',
+                    # 'one_point_two_b',
+                    # 'one_point_three', 'one_point_three_b', 'improved_water', 'woman_funding'
+                    ]
+    search_fields = ['village__title_en', 'village__title_ru', 'village__title_uz']
+
+    fields = ['village', 'number_of_audits',
+              # ('one_a', 'one_b'), ('two_a', 'two_b'),
+              # ('one_point_two', 'one_point_two_b'),
+              # ('one_point_three', 'one_point_three_b'), 'improved_water', 'woman_funding'
+              ]
 
 
 class NewsAdmin(admin.ModelAdmin):
@@ -51,6 +146,11 @@ class GalleryAdmin(admin.ModelAdmin):
 
 admin.site.site_header = "Enhancing economic opportunities for rural women"
 admin.site.register(News, NewsAdmin)
+admin.site.register(Region, RegionAdmin)
+admin.site.register(District, DistrictAdmin)
+admin.site.register(Village, VillageAdmin)
+admin.site.register(VillageDocuments, VillageDocumentsAdmin)
+admin.site.register(SocialAudit, SocialAuditAdmin)
 admin.site.register(Document, DocumentAdmin)
 admin.site.register(AboutPage, AboutPageAdmin)
 admin.site.register(Contact, ContactAdmin)
