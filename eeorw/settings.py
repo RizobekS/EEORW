@@ -87,10 +87,10 @@ DATABASES = {
     # }
     'default': {
          'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME': 'eeorw',
-         'USER': 'postgres',
-         'PASSWORD': 'badiko$123',
-         'HOST': 'localhost',
+         'NAME': 'DB_NAME',
+         'USER': 'DB_USER',
+         'PASSWORD': 'db_password',
+         'HOST': 'DB_HOST',
     }
 }
 
@@ -154,9 +154,9 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 SITE_ID = 1
 
 EMAIL_USE_TLS = True
-EMAIL_HOST = 'mail.uzrd.uz'
-EMAIL_HOST_USER = 'r.soibov@uzrd.uz'  # should be change for moderator email
-EMAIL_HOST_PASSWORD = 'badiko$123'
+EMAIL_HOST = 'HOST_MAIL'
+EMAIL_HOST_USER = 'test@test.com'  # should be change for moderator email
+EMAIL_HOST_PASSWORD = 'password'
 SERVER_EMAIL = EMAIL_HOST_USER
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
